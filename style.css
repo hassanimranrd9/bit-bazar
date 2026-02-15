@@ -1,4 +1,4 @@
-* {/* General Styles */
+/* General Styles */
 * {margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat',sans-serif;}
 body {background:#0f0f0f; color:#fff; line-height:1.6;}
 
@@ -56,4 +56,3 @@ nav a:hover {color:#ff4c4c; transform:scale(1.1);}
 
 /* Footer */
 footer {text-align:center; padding:25px; background:#111; border-top:1px solid #333; font-size:14px;}
-
