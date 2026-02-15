@@ -1,76 +1,41 @@
+:::writing{variant="standard" id="43821"}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hassan Luxury Store</title>
+<title>Hasan Luxury Store</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- Header -->
-<header>
-    <div class="logo">Hassan Luxury</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<header class="header">
+  <h1>Hasan Luxury Store</h1>
+  <p>Premium Amazon Picks</p>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Exclusive Luxury Products</h1>
-        <p>Handpicked Amazon items for style & elegance</p>
-        <a href="#shop" class="btn-gradient">Shop Now</a>
-    </div>
-</section>
-
-<!-- Controls: Search + Filter -->
 <section class="controls">
-    <input type="text" id="searchInput" placeholder="Search products...">
-    <select id="categoryFilter">
-        <option value="all">All Categories</option>
-        <option value="watch">Watches</option>
-        <option value="perfume">Perfumes</option>
-        <option value="bag">Bags</option>
-        <option value="tech">Tech</option>
-    </select>
+  <input type="text" id="searchInput" placeholder="Search luxury items...">
+
+  <select id="categoryFilter">
+    <option value="all">All</option>
+    <option value="tech">Tech</option>
+    <option value="bag">Bag</option>
+    <option value="bags">Bag</option>
+    <option value="perfume">Perfume</option>
+    <option value="clothes">Clothes</option>
+    <option value="watch">Watch</option>
+  </select>
 </section>
 
-<!-- Products Section (Dynamic) -->
-<section id="shop" class="products">
-    <h2>Featured Products</h2>
-    <div class="product-grid" id="productGrid">
-        <!-- Products loaded by script.js -->
-    </div>
-</section>
+<div id="productGrid" class="grid"></div>
 
-<!-- About Section -->
-<section id="about" class="about">
-    <h2>About Hassan Luxury</h2>
-    <p>We provide top Amazon affiliate products with a premium luxury experience. Stylish, colorful, and user-friendly shopping.</p>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: hassanimranrd9@gmail.com</p>
-    <p>Phone: +92 326_4265770</p>
-</section>
-
-<!-- Footer -->
 <footer>
-    <p>© 2026 Hassan Luxury Store | Powered by Amazon Affiliate</p>
+  <h3>Contact</h3>
+  <p>hassanimranrd9@gmail.com</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
+:::
