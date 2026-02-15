@@ -10,11 +10,22 @@
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg,#12001f,#1d0033,#2a004d);
-    color: white;
-    overflow-x: hidden;
+  /* Product cards smaller size */
+#productGrid .card {
+    background: #1c1c1c;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    width: 180px; /* make the card narrower */
+    margin: 10px auto;
+}
+
+#productGrid .card img {
+    width: 160px; /* smaller image */
+    height: auto;
+    border-radius: 8px;
+}
+
 }
 
 /* Top Notification Bar */
@@ -214,4 +225,5 @@ footer p {
 <script src="script.js"></script>
 </body>
 </html>
+
 
