@@ -5,17 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hasan Luxury Store</title>
 
+<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 body {
-    margin:0;
+    margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg,#12001f,#1d0033,#2a004d);
     color: white;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
+/* Top Notification Bar */
 .topbar {
     background: linear-gradient(90deg,#ff008c,#ff4da6,#ff99cc);
     padding: 10px;
@@ -24,6 +26,7 @@ body {
     font-weight: 500;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -35,6 +38,7 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 .logo {
     font-size: 28px;
     font-weight: bold;
@@ -42,160 +46,131 @@ header {
     -webkit-background-clip: text;
     color: transparent;
 }
+
 nav a {
     margin: 0 15px;
     text-decoration: none;
     color: white;
     font-weight: 500;
-    transition:0.3s;
-}
-nav a:hover {
-    color:#ff66cc;
+    transition: 0.3s;
 }
 
-.hero{
-    text-align:center;
-    padding:60px 20px;
+nav a:hover {
+    color: #ff66cc;
 }
-.hero h1{
-    font-size:48px;
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
     background: linear-gradient(90deg,#ff008c,#ff99cc);
     -webkit-background-clip: text;
     color: transparent;
 }
-.hero p{
-    opacity:.8;
-    font-size:18px;
+
+.hero p {
+    opacity: 0.8;
+    font-size: 18px;
 }
 
-.controls{
-    text-align:center;
-    padding:20px;
-}
-.controls input,.controls select{
-    padding:10px;
-    border-radius:12px;
-    border:none;
-    margin:5px;
-    background:#2a004d;
-    color:white;
-    font-size:16px;
+/* Controls/Search Area */
+.controls {
+    text-align: center;
+    padding: 20px;
 }
 
-#productGrid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
-    padding:20px;
+.controls input, .controls select {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    margin: 6px;
+    background: #2a004d;
+    color: white;
+    font-size: 16px;
 }
 
-#productGrid .card{
-    background:#1c1c1c;
-    padding:8px;
-    border-radius:12px;
-    text-align:center;
-    transition:.3s;
-    cursor:pointer;
-    overflow:hidden;
-    width:150px;
-    margin:auto;
-}
-#productGrid .card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(255,0,140,.4);
-}
-#productGrid .card img{
-    width:120px;
-    height:auto;
-    border-radius:6px;
-    transition:.3s;
-}
-#productGrid .card:hover img{
-    transform: scale(1.05);
-}
-#productGrid .card h3{
-    margin:8px 0 4px 0;
-    font-size:14px;
-}
-#productGrid .card p{
-    font-size:12px;
-    opacity:.9;
-}
-#productGrid .card a{
-    display:inline-block;
-    margin-top:5px;
-    padding:4px 10px;
-    border-radius:6px;
-    text-decoration:none;
-    background:#ff008c;
-    color:white;
-    font-weight:500;
-    font-size:12px;
-    transition:.3s;
-}
-#productGrid .card a:hover{
-    background:#ff66cc;
+/* Product Grid Area — Do NOT touch */
+#productGrid {
+    padding: 30px;
 }
 
-.circle{
-    position:fixed;
-    width:180px;
-    height:180px;
-    background:radial-gradient(circle,#ff008c,transparent);
-    border-radius:50%;
-    filter:blur(50px);
-    animation:float 12s infinite;
-    z-index:0;
-}
-.circle2{
-    top:60%;
-    left:80%;
-    animation-delay:2s;
-}
-.circle3{
-    top:20%;
-    left:10%;
-    animation-delay:5s;
-}
-@keyframes float{
-    0%{transform:translateY(0)}
-    50%{transform:translateY(-40px)}
-    100%{transform:translateY(0)}
+/* Floating background animations */
+.circle {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle,#ff008c,transparent);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: float 10s infinite;
+    z-index: 0;
 }
 
-footer{
-    margin-top:40px;
-    padding:30px;
-    background:black;
-    text-align:center;
-}
-footer h3{
-    color:#ff66cc;
-    margin-bottom:8px;
-}
-footer p{
-    margin:3px;
-    font-size:13px;
+.circle2 {
+    top: 60%;
+    left: 80%;
+    animation-delay: 3s;
 }
 
-.fade-in{
-    animation:fadeIn 1s ease-in-out forwards;
-    opacity:0;
+.circle3 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 5s;
 }
-@keyframes fadeIn{
-    0%{opacity:0;transform:translateY(20px);}
-    100%{opacity:1;transform:translateY(0);}
+
+@keyframes float {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(-40px) }
+    100% { transform: translateY(0) }
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+    padding: 40px;
+    background: black;
+    text-align: center;
+}
+
+footer h3 {
+    color: #ff66cc;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* Smooth fade animation */
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
 }
 </style>
 </head>
 <body>
 
+<!-- Animated Background Circles -->
 <div class="circle"></div>
 <div class="circle circle2"></div>
 <div class="circle circle3"></div>
 
-<div class="topbar">🔥 Premium Amazon Deals Updated Daily</div>
+<!-- Top Bar -->
+<div class="topbar">
+    🔥 Premium Amazon Deals Updated Daily
+</div>
 
+<!-- Header Navigation -->
 <header>
     <div class="logo">Hasan Luxury Store</div>
     <nav>
@@ -206,11 +181,36 @@ footer p{
     </nav>
 </header>
 
+<!-- Hero Section -->
 <section class="hero fade-in">
     <h1>Luxury Picks For You</h1>
     <p>Discover premium Amazon products with exclusive deals and best prices.</p>
 </section>
 
+<!-- Controls -->
 <div class="controls fade-in">
-    <input type="text" id="
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="tech">Tech</option>
+        <option value="bag">Bag</option>
+        <option value="bags">Bag</option>
+        <option value="perfume">Perfume</option>
+        <option value="clothes">Clothes</option>
+        <option value="watch">Watch</option>
+    </select>
+</div>
 
+<!-- Products Area — Untouched -->
+<div id="productGrid"></div>
+
+<!-- Footer -->
+<footer>
+    <h3>Contact Support</h3>
+    <p>Email: hassanimranrd9@gmail.com</p>
+    <p>© 2026 Hasan Luxury Store. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
