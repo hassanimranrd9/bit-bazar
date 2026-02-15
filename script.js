@@ -1,7 +1,7 @@
 const products = [
 { name:"WIHOLL Two Piece Sets", category:"clothes", price:"PKR 6,877/_", img:"https://m.media-amazon.com/images/I/61DY7BTj6AL.*AC_SY741*.jpg", link:"https://amzn.to/3MqywF8" },
 { name:"BAGSMART Gym Bag for Women", category:"bags", price:"PKR 4994", img:"https://m.media-amazon.com/images/I/61WKa4fHYkL.*AC_SX569*.jpg", link:"https://amzn.to/4akrNWu" },
-{ name:"Premium Perfume 1", category:"perfume", price:"$89", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
+{ name:"Inspire Black Nitrile Gloves", category:"Gloves", price:"PKR 4,000/_", img:"https://m.media-amazon.com/images/I/71u2II-WKSL._AC_SX679_.jpg", link:"https://amzn.to/4tEmzfH" },
 { name:"Premium Perfume 2", category:"perfume", price:"$99", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
 { name:"Designer Bag 1", category:"bag", price:"$149", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
 { name:"Designer Bag 2", category:"bag", price:"$179", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
@@ -56,4 +56,5 @@ displayProducts(filtered);
 
 searchInput.addEventListener("input",filterProducts);
 categoryFilter.addEventListener("change",filterProducts);
+
 
