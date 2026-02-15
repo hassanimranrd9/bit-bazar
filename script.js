@@ -1,5 +1,5 @@
 const products = [
-{ name:"Luxury Watch 1", category:"watch", price:"$199", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
+{ name:"WIHOLL Two Piece Sets", category:"clothes", price:"PKR 6,877/_", img:"https://m.media-amazon.com/images/I/61DY7BTj6AL._AC_SY741_.jpg", link:"https://amzn.to/3MqywF8" },
 { name:"Luxury Watch 2", category:"watch", price:"$249", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
 { name:"Premium Perfume 1", category:"perfume", price:"$89", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
 { name:"Premium Perfume 2", category:"perfume", price:"$99", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
