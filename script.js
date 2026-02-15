@@ -1,5 +1,5 @@
 const products = [
-  // --- Original 2 products remain unchanged ---
+  // --- Original 2 products stay untouched ---
   { 
     name:"WIHOLL Two Piece Sets", 
     category:"clothes", 
@@ -23,7 +23,7 @@ const products = [
     tag: "New Arrival"
   },
 
-  // --- Rest of products professional features added ---
+  // --- Rest of products professional features ---
   { name:"Premium Perfume 1", category:"perfume", price:89, discount:10, stock:5, rating:4, img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK", tag:"New Arrival" },
   { name:"Premium Perfume 2", category:"perfume", price:99, discount:15, stock:3, rating:4.2, img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK", tag:"Hot" },
   { name:"Designer Bag 1", category:"bag", price:149, discount:20, stock:7, rating:4.8, img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK", tag:"Hot" },
@@ -57,7 +57,8 @@ const categoryFilter = document.getElementById("categoryFilter");
 function displayProducts(filteredProducts) {
   grid.innerHTML = "";
   filteredProducts.forEach(product => {
-    let discountedPrice = getDiscountedPrice(parseFloat(product.price.replace(/[^0-9.]/g, '')), product.discount);
+    let numericPrice = parseFloat(product.price.toString().replace(/[^0-9.]/g, ''));
+    let discountedPrice = getDiscountedPrice(numericPrice, product.discount);
     let stockText = product.stock > 0 ? `${product.stock} left` : "Out of Stock";
 
     let stars = "";
@@ -72,7 +73,7 @@ function displayProducts(filteredProducts) {
         <h3>${product.name}</h3>
         <p class="price">
           ${product.price.includes("PKR") ? product.price : "$" + discountedPrice} 
-          ${product.discount ? `<span class="old-price">$${product.price}</span>` : ""}
+          ${product.discount ? `<span class="old-price">$${numericPrice}</span>` : ""}
         </p>
         <p class="rating">${stars}</p>
         <p class="stock">${stockText}</p>
@@ -82,10 +83,17 @@ function displayProducts(filteredProducts) {
       </div>
     `;
   });
+
+  // Animation: fade-in for product cards
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.style.opacity = 0;
+    setTimeout(() => { card.style.opacity = 1; card.style.transform = "translateY(0)"; }, 100);
+  });
 }
 
 displayProducts(products);
 
+// Search & Category Filter
 searchInput.addEventListener("input", () => filterProducts());
 categoryFilter.addEventListener("change", () => filterProducts());
 
