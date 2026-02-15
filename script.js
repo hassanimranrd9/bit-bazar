@@ -1,6 +1,6 @@
 const products = [
 { name:"WIHOLL Two Piece Sets", category:"clothes", price:"PKR 6,877/_", img:"https://m.media-amazon.com/images/I/61DY7BTj6AL._AC_SY741_.jpg", link:"https://amzn.to/3MqywF8" },
-{ name:"Luxury Watch 2", category:"watch", price:"$249", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
+{ name:"BAGSMART Gym Bag for Women", category:"bags", price:"PKR 4994", img:"https://m.media-amazon.com/images/I/61WKa4fHYkL._AC_SX569_.jpg", link:"https://amzn.to/4akrNWu" },
 { name:"Premium Perfume 1", category:"perfume", price:"$89", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
 { name:"Premium Perfume 2", category:"perfume", price:"$99", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
 { name:"Designer Bag 1", category:"bag", price:"$149", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
@@ -61,3 +61,4 @@ return matchesSearch && matchesCategory;
 
 displayProducts(filtered);
 }
+
