@@ -140,3 +140,4 @@ document.head.appendChild(style);
 
 /* ===== START ===== */
 displayProducts(products);
+
