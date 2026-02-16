@@ -1,309 +1,44 @@
-/* ===============================
-   GLOBAL RESET
-================================ */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+body{background:linear-gradient(135deg,#0f001a,#1a0033,#140022);color:#fff;overflow-x:hidden;}
 
-body{
-background:linear-gradient(135deg,#0a0014,#140022,#0a0014);
-color:#fff;
-overflow-x:hidden;
-}
+/* Floating lights */
+.glow{position:fixed;width:300px;height:300px;background:radial-gradient(circle,#ff00aa,transparent);filter:blur(90px);animation:float 12s infinite;}
+.glow2{left:70%;top:60%;background:radial-gradient(circle,#00ffcc,transparent);}
+.glow3{left:15%;top:20%;background:radial-gradient(circle,#ffee00,transparent);}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-60px)}100%{transform:translateY(0)}}
 
-/* ===============================
-   ANIMATED BACKGROUND GLOW
-================================ */
-.glow{
-position:fixed;
-width:400px;
-height:400px;
-background:radial-gradient(circle,#ff00aa,transparent);
-filter:blur(120px);
-animation:float 12s ease-in-out infinite;
-z-index:0;
-}
-.glow2{
-left:80%;
-top:60%;
-background:radial-gradient(circle,#00ffcc,transparent);
-animation-delay:3s;
-}
-.glow3{
-left:10%;
-top:20%;
-background:radial-gradient(circle,#ffee00,transparent);
-animation-delay:6s;
-}
+/* Header */
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 50px;background:rgba(0,0,0,0.4);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
+.logo{font-size:30px;font-weight:800;background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);-webkit-background-clip:text;color:transparent;}
+nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;transition:.3s;}
+nav a:hover{color:#ff00aa;}
 
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-80px)}
-100%{transform:translateY(0)}
-}
+/* Hero */
+.hero{text-align:center;padding:90px 20px;}
+.hero h1{font-size:55px;background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);-webkit-background-clip:text;color:transparent;}
+.hero p{opacity:.8;margin-top:10px;font-size:18px;}
 
-/* ===============================
-   HEADER
-================================ */
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(15px);
-position:sticky;
-top:0;
-z-index:100;
-border-bottom:1px solid rgba(255,255,255,0.08);
-}
+/* Controls */
+.controls{text-align:center;margin:20px;}
+.controls input,.controls select{padding:12px 15px;border:none;border-radius:30px;margin:5px;background:#1f0033;color:#fff;width:220px;}
 
-.logo{
-font-size:32px;
-font-weight:800;
-background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);
--webkit-background-clip:text;
-color:transparent;
-animation:shine 4s linear infinite;
-}
+/* Product Grid */
+#productGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;padding:30px;}
 
-@keyframes shine{
-0%{background-position:0%}
-100%{background-position:200%}
-}
+/* Product Card */
+.product-card{position:relative;background:rgba(255,255,255,0.05);padding:12px;border-radius:18px;text-align:center;transition:.3s;backdrop-filter:blur(8px);}
+.product-card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 15px 40px rgba(255,0,170,.4);}
+.product-card img{width:130px;height:130px;object-fit:cover;border-radius:12px;}
+.product-card h3{font-size:15px;margin:8px 0;}
+.product-card .price{color:#ffcc00;font-size:14px;}
+.old-price{text-decoration:line-through;color:#ff5555;font-size:13px;display:block;margin-bottom:4px;}
+.stock-badge{position:absolute;top:10px;left:10px;background:linear-gradient(90deg,#ff00aa,#ffcc00);color:#000;font-weight:700;padding:3px 8px;border-radius:12px;font-size:12px;}
 
-nav a{
-margin:0 18px;
-color:#fff;
-text-decoration:none;
-font-weight:500;
-position:relative;
-transition:.3s;
-}
+/* Buy button */
+.buy-btn{display:inline-block;margin-top:8px;padding:12px 20px;border-radius:25px;background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);color:#000;font-weight:700;text-decoration:none;font-size:15px;transition:.3s;}
+.buy-btn:hover{transform:scale(1.1);box-shadow:0 0 20px #ff00aa;}
 
-nav a::after{
-content:"";
-position:absolute;
-bottom:-5px;
-left:0;
-width:0%;
-height:2px;
-background:#ff00aa;
-transition:.3s;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
-nav a:hover{
-color:#ff00aa;
-}
-
-/* ===============================
-   HERO
-================================ */
-.hero{
-text-align:center;
-padding:100px 20px 60px;
-position:relative;
-z-index:1;
-}
-
-.hero h1{
-font-size:60px;
-background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);
--webkit-background-clip:text;
-color:transparent;
-animation:fadeUp 1.2s ease;
-}
-
-.hero p{
-margin-top:12px;
-opacity:.8;
-font-size:18px;
-animation:fadeUp 1.8s ease;
-}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(30px)}
-to{opacity:1;transform:translateY(0)}
-}
-
-/* ===============================
-   SEARCH CONTROLS
-================================ */
-.controls{
-text-align:center;
-margin:20px;
-z-index:2;
-position:relative;
-}
-
-.controls input,
-.controls select{
-padding:13px 18px;
-border:none;
-border-radius:30px;
-margin:6px;
-background:#1a0030;
-color:#fff;
-width:230px;
-outline:none;
-transition:.3s;
-border:1px solid rgba(255,255,255,0.1);
-}
-
-.controls input:focus,
-.controls select:focus{
-border:1px solid #ff00aa;
-box-shadow:0 0 12px #ff00aa;
-}
-
-/* ===============================
-   PRODUCT GRID
-================================ */
-#productGrid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:22px;
-padding:40px;
-z-index:2;
-position:relative;
-}
-
-/* ===============================
-   PRODUCT CARD
-================================ */
-.product-card{
-background:rgba(255,255,255,0.04);
-padding:14px;
-border-radius:18px;
-text-align:center;
-transition:.35s;
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.05);
-position:relative;
-overflow:hidden;
-}
-
-.product-card::before{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(120deg,transparent,#ff00aa,transparent);
-opacity:0;
-transition:.4s;
-}
-
-.product-card:hover::before{
-opacity:.15;
-}
-
-.product-card:hover{
-transform:translateY(-12px) scale(1.03);
-box-shadow:0 20px 60px rgba(255,0,170,.35);
-}
-
-.product-card img{
-width:150px;
-height:150px;
-object-fit:cover;
-border-radius:14px;
-margin-bottom:6px;
-transition:.4s;
-}
-
-.product-card:hover img{
-transform:scale(1.05);
-}
-
-.product-card h3{
-font-size:15px;
-margin:8px 0;
-}
-
-.price{
-font-size:15px;
-color:#00ffcc;
-font-weight:700;
-}
-
-/* old price line */
-.old-price{
-text-decoration:line-through;
-color:#aaa;
-font-size:13px;
-margin-right:5px;
-}
-
-/* ===============================
-   BUY BUTTON
-================================ */
-.buy-btn{
-display:inline-block;
-margin-top:10px;
-padding:11px 22px;
-border-radius:30px;
-background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);
-color:#000;
-font-weight:700;
-text-decoration:none;
-transition:.3s;
-font-size:14px;
-box-shadow:0 0 10px rgba(255,0,170,.4);
-}
-
-.buy-btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px #ff00aa;
-}
-
-/* ===============================
-   FOOTER
-================================ */
-footer{
-margin-top:70px;
-padding:45px;
-text-align:center;
-background:#000;
-border-top:1px solid rgba(255,255,255,0.1);
-}
-
-footer h3{
-color:#ff00aa;
-margin-bottom:10px;
-font-size:22px;
-}
-
-footer p{
-font-size:14px;
-opacity:.7;
-margin-top:5px;
-}
-
-/* ===============================
-   SCROLL ANIMATION
-================================ */
-.product-card{
-opacity:0;
-transform:translateY(40px);
-animation:cardShow .7s forwards;
-}
-
-.product-card:nth-child(1){animation-delay:.1s}
-.product-card:nth-child(2){animation-delay:.2s}
-.product-card:nth-child(3){animation-delay:.3s}
-.product-card:nth-child(4){animation-delay:.4s}
-.product-card:nth-child(5){animation-delay:.5s}
-
-@keyframes cardShow{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+/* Footer */
+footer{margin-top:60px;padding:40px;text-align:center;background:#000;}
+footer h3{color:#ff00aa;margin-bottom:10px;}
+footer p{font-size:14px;opacity:.8;}
