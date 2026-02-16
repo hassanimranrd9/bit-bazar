@@ -1,209 +1,70 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hassan Luxury Store</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+/* ----------- BODY & FONTS ----------- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+body{background:linear-gradient(135deg,#0f001a,#1a0033,#140022);color:#fff;overflow-x:hidden;}
 
-body{
-background:linear-gradient(135deg,#0f001a,#1a0033,#140022);
-color:#fff;
-overflow-x:hidden;
-}
+/* ----------- FLOATING LIGHTS ----------- */
+.glow{position:fixed;width:300px;height:300px;background:radial-gradient(circle,#ff00aa,transparent);filter:blur(90px);animation:float 10s infinite;z-index:0;}
+.glow2{left:80%;top:60%;background:radial-gradient(circle,#00ffcc,transparent);}
+.glow3{left:10%;top:20%;background:radial-gradient(circle,#ffee00,transparent);}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-60px)}100%{transform:translateY(0)}}
 
-/* floating luxury lights */
-.glow{
-position:fixed;
-width:300px;
-height:300px;
-background:radial-gradient(circle,#ff00aa,transparent);
-filter:blur(90px);
-animation:float 10s infinite;
-z-index:0;
-}
-.glow2{left:80%;top:60%;background:radial-gradient(circle,#00ffcc,transparent)}
-.glow3{left:10%;top:20%;background:radial-gradient(circle,#ffee00,transparent)}
+/* ----------- HEADER ----------- */
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 50px;background:rgba(0,0,0,0.4);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
+.logo{font-size:30px;font-weight:800;background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);-webkit-background-clip:text;color:transparent;}
 
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-60px)}
-100%{transform:translateY(0)}
-}
+/* ----------- HERO SECTION ----------- */
+.hero{text-align:center;padding:90px 20px;position:relative;z-index:1;}
+.hero h1{font-size:55px;background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);-webkit-background-clip:text;color:transparent;}
+.hero p{opacity:.8;margin-top:10px;font-size:18px;}
 
-/* header */
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 50px;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(12px);
-position:sticky;
-top:0;
-z-index:100;
-}
-
-.logo{
-font-size:30px;
-font-weight:800;
-background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);
--webkit-background-clip:text;
-color:transparent;
-}
-
-nav a{
-margin:0 15px;
-color:#fff;
-text-decoration:none;
-font-weight:500;
-transition:.3s;
-}
-nav a:hover{color:#ff00aa}
-
-/* hero */
-.hero{
-text-align:center;
-padding:90px 20px;
-position:relative;
-z-index:1;
-}
-
-.hero h1{
-font-size:55px;
-background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);
--webkit-background-clip:text;
-color:transparent;
-}
-
-.hero p{
-opacity:.8;
-margin-top:10px;
-font-size:18px;
-}
-
-/* search/filter */
-.controls{
-text-align:center;
-margin:20px;
-position:relative;
-z-index:2;
-}
-
+/* ----------- CONTROLS (FUTURE SEARCH / FILTER) ----------- */
+.controls{text-align:center;margin:20px;position:relative;z-index:2;}
 .controls input,
-.controls select{
-padding:12px 15px;
-border:none;
-border-radius:30px;
-margin:5px;
-background:#1f0033;
-color:#fff;
-width:220px;
-}
+.controls select{padding:12px 15px;border:none;border-radius:30px;margin:5px;background:#1f0033;color:#fff;width:220px;}
 
-/* PRODUCT GRID */
-#productGrid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-gap:20px;
-padding:30px;
-z-index:2;
-position:relative;
-}
+/* ----------- PRODUCT GRID ----------- */
+#productGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;padding:30px;z-index:2;position:relative;}
 
-/* product card */
-.product-card{
-background:rgba(255,255,255,0.05);
-padding:12px;
-border-radius:18px;
-text-align:center;
-transition:.3s;
-backdrop-filter:blur(8px);
-}
+/* ----------- PRODUCT CARD ----------- */
+.product-card{background:rgba(255,255,255,0.05);padding:12px;border-radius:18px;text-align:center;transition:.3s;backdrop-filter:blur(8px);position:relative;}
+.product-card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 40px rgba(255,0,170,.4);}
+.product-card img{width:150px;height:150px;object-fit:cover;border-radius:12px;}
+.product-card h3{font-size:15px;margin:8px 0;}
+.price{font-size:14px;color:#ffcc00;}
+.old{text-decoration:line-through;color:#aaa;font-size:13px;}
+.stock{position:absolute;top:10px;left:10px;background:red;padding:4px 8px;font-size:11px;border-radius:10px;}
 
-.product-card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 15px 40px rgba(255,0,170,.4);
-}
+/* ----------- BUY BUTTON ----------- */
+.buy-btn{display:inline-block;margin-top:8px;padding:10px 18px;border-radius:30px;background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);color:#000;font-weight:700;text-decoration:none;transition:.3s;font-size:14px;}
+.buy-btn:hover{transform:scale(1.08);box-shadow:0 0 15px #ff00aa;}
 
-.product-card img{
-width:150px;
-height:150px;
-object-fit:cover;
-border-radius:12px;
-}
-
-.product-card h3{
-font-size:15px;
-margin:8px 0;
-}
-
-.product-card p{
-font-size:14px;
-color:#ffcc00;
-}
-
-/* buy button */
-.buy-btn{
-display:inline-block;
-margin-top:8px;
-padding:10px 18px;
-border-radius:30px;
-background:linear-gradient(90deg,#ff00aa,#ffcc00,#00ffcc);
-color:#000;
-font-weight:700;
-text-decoration:none;
-transition:.3s;
-font-size:14px;
-}
-
-.buy-btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 15px #ff00aa;
-}
-
-/* footer */
-footer{
-margin-top:60px;
-padding:40px;
-text-align:center;
-background:#000;
-}
-
-footer h3{
-color:#ff00aa;
-margin-bottom:10px;
-}
-
-footer p{
-font-size:14px;
-opacity:.8;
-}
+/* ----------- FOOTER ----------- */
+footer{margin-top:60px;padding:40px;text-align:center;background:#000;}
+footer h3{color:#ff00aa;margin-bottom:10px;}
+footer p{font-size:14px;opacity:.8;}
 </style>
 
 </head>
-
 <body>
 
+<!-- Floating Glows -->
 <div class="glow"></div>
 <div class="glow glow2"></div>
 <div class="glow glow3"></div>
 
 <header>
-<div class="logo">Hassan Store</div>
-<nav>
-<a href="#">Home</a>
-<a href="#">Shop</a>
-<a href="#">Deals</a>
-<a href="#">Contact</a>
-</nav>
+<div class="logo">Hassan Luxury Store</div>
 </header>
 
 <section class="hero">
@@ -224,8 +85,7 @@ opacity:.8;
 </select>
 </div>
 
-<!-- PRODUCTS SHOW HERE -->
-
+<!-- PRODUCTS GRID -->
 <div id="productGrid"></div>
 
 <footer>
@@ -233,8 +93,7 @@ opacity:.8;
 <p>Email: hassanimranrd9@gmail.com</p>
 <p>© 2026 Hassan Luxury Store</p>
 </footer>
-<script src="script.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>
-
