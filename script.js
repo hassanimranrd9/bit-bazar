@@ -1,9 +1,10 @@
 const products = [
   { name:"WIHOLL Two Piece Sets", category:"clothes", price:"PKR 6,877/_", oldPrice:"PKR 8,500/_", stock:"Limited", img:"https://m.media-amazon.com/images/I/61DY7BTj6AL._AC_SY741_.jpg", link:"https://amzn.to/3MqywF8" },
-  { name:"Luxury Watch 2", category:"watch", price:"$249", oldPrice:"$299", stock:"In Stock", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
+  { name:"Luxury Watch 2", category:"clothes", price:"10000", oldPrice:"14000", stock:"limited", img:"https://m.media-amazon.com/images/I/71vkKOw+uVL._AC_SX569_.jpg", link:"https://amzn.to/4anvfzG" },
   { name:"Nike Hoodie", category:"clothes", price:"$99", oldPrice:"$129", stock:"Limited", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
   { name:"Bluetooth Headphones", category:"tech", price:"$129", oldPrice:"$179", stock:"In Stock", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" },
   { name:"Designer Bag", category:"bag", price:"$199", oldPrice:"$249", stock:"Limited", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" }
+   { name:"Designer Bag", category:"bag", price:"$199", oldPrice:"$249", stock:"Limited", img:"https://via.placeholder.com/250", link:"YOUR_AFFILIATE_LINK" }
 ];
 
 const grid = document.getElementById("productGrid");
@@ -42,3 +43,4 @@ function filterProducts(){
 searchInput.addEventListener("input", filterProducts);
 categoryFilter.addEventListener("change", filterProducts);
 displayProducts(products);
+
